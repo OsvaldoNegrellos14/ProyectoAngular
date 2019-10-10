@@ -4,8 +4,22 @@
 }
 
 .pago {
-    background-color: black;
+    border: 1px solid rgb(212, 212, 212);
     padding: 15px;
-    color: white;
     border-radius: 10px;
+    text-align: right;
+    background: rgb(235, 235, 235);
+}
+
+.pago a {
+    width: 100%;
+}
+
+.sell i {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.recomendados {
+    padding-top: 100px;
 }

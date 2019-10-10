@@ -1,26 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a id="nombre" class="navbar-brand" [routerLink]="['/home']">Bookers</a>
+    <a id="nombre" class="navbar-brand" [routerLink]="['/home']">Lectura Urbana</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" [routerLink]="['/home']">Inicio<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/home']">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Lo nuevo!</a>
+                <a class="nav-link" [routerLink]="['/category']">Productos</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categorias
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Categoria 1</a>
-                    <a class="dropdown-item" href="#">Categoria 2</a>
-                    <a class="dropdown-item" href="#">Categoria 3</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/category']">Categorias</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/contacto']">Contacto</a>
@@ -30,9 +23,6 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
         </form>
-        <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-danger my-2 my-sm-0" type="submit">Registrate</button>
-        </form>
-
+        <a class="btn btn-danger my-2 my-sm-0" [routerLink]="['/registro']">Iniciar sesión</a>
     </div>
 </nav>

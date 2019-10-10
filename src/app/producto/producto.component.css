@@ -1,0 +1,11 @@
+#producto img {
+    margin: 0px 0px 70px 0px;
+    max-width: 75%;
+}
+
+.pago {
+    background-color: black;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksDataRepositoryService } from '../books-data-repository.service';
 
 @Component({
   selector: 'app-productos',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bookRepository: BooksDataRepositoryService) { }
 
   ngOnInit() {
-  }
-
+    }
+    get books() {
+      return this.bookRepository.getBooks();
+    }
+  
 }

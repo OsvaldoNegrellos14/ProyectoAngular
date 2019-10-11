@@ -1,4 +1,4 @@
-<div id="producto">
+<div id="producto" ngFor="let book">
     <div class="container"><br>
         <div class="row">
             <div class="img-container col-lg-4 col-md-6 col-sm-12">
@@ -8,15 +8,13 @@
                 <h2>
                     <strong>Acerca del libro:</strong>
                 </h2>
-                <h4>Categoria:</h4>
-                <h4>Editorial:</h4>
-                <h4>Idioma:</h4>
-                <h4>ISBN:</h4>
+                <h4>{{'Categoria: ' + book.category}}</h4>
+                <h4>{{book.pages}}</h4>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="pago">
-                    <h1>Nombre del libro</h1>
-                    <h5>Autor del libro</h5><br>
+                    <h1>{{book.book_title}}</h1>
+                    <h5>{{'Autor:' + book.author}}</h5><br>
                     <h2>$ 2,624.00</h2>
                     <p>Forma de pago:</p>
                     <div class="sell">
@@ -30,88 +28,13 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-6">
                 <h3>Sinopsis</h3>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque doloribus placeat aut, possimus natus doloremque architecto suscipit voluptas iure nesciunt.
+                    {{book.description}}
                 </p>
             </div>
-
         </div>
-
-        <div class="recomendados">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-                        <a [routerLink]="['/producto']">
-                            <img src="http://lorempixel.com/600/600/" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Nombre del libro</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span>Nombre del autor:</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p>Precio</p>
-                                </div>
-                                <div class="col-6"><a class="btn btn-primary my-2 my-sm-0" [routerLink]="['/producto']">Ver
-                                        más</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-                        <a [routerLink]="['/producto']">
-                            <img src="http://lorempixel.com/600/600/" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Nombre del libro</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span>Nombre del autor:</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p>Precio</p>
-                                </div>
-                                <div class="col-6"><a class="btn btn-primary my-2 my-sm-0" [routerLink]="['/producto']">Ver
-                                        más</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-                        <a [routerLink]="['/producto']">
-                            <img src="http://lorempixel.com/600/600/" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Nombre del libro</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span>Nombre del autor:</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-6">
-                                    <p>Precio</p>
-                                </div>
-                                <div class="col-6"><a class="btn btn-primary my-2 my-sm-0" [routerLink]="['/producto']">Ver
-                                        más</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
     </div>
 </div>

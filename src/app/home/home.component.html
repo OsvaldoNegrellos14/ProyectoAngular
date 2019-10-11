@@ -7,21 +7,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="http://lorempixel.com/720/480/" class="d-block w-100 img-fluid" style="height: 480px">
+                <img src="../../assets/car1.jpg" class="d-block w-100 img-fluid" style="height: 600px">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Banners</h5>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, at.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="http://lorempixel.com/720/480/" class="d-block w-100 img-fluid" style="height: 480px">
+                <img src="../../assets/car2.jpg" class="d-block w-100 img-fluid" style="height: 600px">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Nombre del libro</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="http://lorempixel.com/720/480/" class="d-block w-100 img-fluid" style="height: 480px">
+                <img src="../../assets/car1.jpg" class="d-block w-100 img-fluid" style="height: 600px">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Categorias</h5>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -66,8 +66,8 @@
 
 <div class="container">
     <div class="row">
-        <div  class="col-lg-4 col-md-6 col-sm-12" *ngFor="let book of books">
-            <div class="card" style="width: 18rem;" >
+        <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let book of books">
+            <div class="card" style="width: 18rem;">
                 <img src="{{'https://picsum.photos/id/'+ book.id +'/200/300'}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{book.book_title}}</h5>
@@ -76,9 +76,9 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-6">
-                            <p>{{book.pages}}</p>
+                            <p><b>Paginas: </b>{{book.pages}}</p>
                         </div>
-                        <div class="col-6"><a [routerLink]="['../products/',book.id]" class="card-link">Ver más</a></div>
+                        <div class="col-6"><a [routerLink]="['../products/',book.id]" class="btn btn-primary my-2 my-sm-0">Ver más</a></div>
                     </div>
                 </div>
             </div>

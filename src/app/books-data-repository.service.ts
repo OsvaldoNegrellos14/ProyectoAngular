@@ -10,7 +10,7 @@ export class BooksDataRepositoryService {
   constructor(private dataSource: BooksDataSourceService) {
     this.dataSource.getBooks().
     subscribe(response => {
-      this.books = response;
+      this.books = response.books;
     });
    }
    getBooks(): Books[] {

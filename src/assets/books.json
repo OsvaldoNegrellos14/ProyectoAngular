@@ -1,0 +1,165 @@
+{
+    "books":[
+        {
+          "id": 1,
+          "description": "sapiente quia qui reiciendis iste totam nihil",
+          "author": "Miguel de Cervantes",
+          "book_title":"Don Quijote de La Mancha I",
+          "category":"Caballeresco",
+          "pages":"517" 
+        },
+        {
+          "id": 2,
+          "description": "ipsum dolor  sapiente quia qui reiciendis iste totam nihil",
+          "author": "bryan iste totam ",
+          "book_title":"Don Quijote de La Mancha II",
+          "category":"Caballeresco",
+          "pages": "611" 
+        },
+        {
+          "id": 3,
+          "description": "Loremdolor ipsum   sapiente quia qui reiciendis iste totam nihil",
+          "author": "William Faulkne",
+          "book_title":"Historias de Nueva Orleans ",
+          "category":"Novela",
+          "pages": "186" 
+        },
+        {
+          "id": 4,
+          "description": "sapiente quia qui reiciendis iste totam nihil",
+          "author": "Antoine SaintExupery",
+          "book_title":"El principito",
+          "category":"Aventura",
+          "pages": "120" 
+        },
+        {
+          "id": 5,
+          "description": "quia qui reiciendis iste totam nihil",
+          "author": "Maquiavelo",
+          "book_title":"El príncipe",
+          "category":"Político",
+          "pages": "210" 
+        },
+        {
+          "id": 6,
+          "description": "qui reiciendis iste totam nihil",
+          "author": "Henry Kissinger",
+          "book_title":" Diplomacia",
+          "category":"Político",
+          "pages": "825" 
+        },
+        {
+          "id": 7,
+          "description": "iste totam nihil",
+          "author": "Kitty Kelley",
+          "book_title":"Los Windsor ",
+          "category":"Biografías",
+          "pages": "620" 
+        },
+        {
+          "id": 8,
+          "description": "hola qui reiciendis iste totam nihil",
+          "author": "Pu-Yi",
+          "book_title":"El Último Emperador",
+          "category":"Autobiografías",
+          "pages": "353" 
+        },
+        {
+          "id": 9,
+          "description": "como reiciendis iste totam nihil",
+          "author": "Pérez Galdós",
+          "book_title":"Fortunata y Jacinta",
+          "category":"Novela",
+          "pages": "625" 
+        },
+        {
+          "id": 10,
+          "description": "tu reiciendis iste totam nihil",
+          "author": "erick iste totam",
+          "book_title":"lorem ipsum ",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 11,
+          "description": "te  reiciendis iste totam nihil",
+          "author": "abi iste totam ",
+          "book_title":"lorem ipsum ",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 12,
+          "description": "llamas reiciendis iste totam nihil",
+          "author": "mike iste totam ",
+          "book_title":" lorem ipsum",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 13,
+          "description": "eh reiciendis iste totam nihil",
+          "author": "cesar iste totam ",
+          "book_title":" lorem ipsum",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 14,
+          "description": "no reiciendis iste totam nihil",
+          "author": "bryan iste totam ",
+          "book_title":"lorem ipsum ",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 15,
+          "description": "si reiciendis iste totam nihil",
+          "author": "ciak iste totam ",
+          "book_title":"lorem ipsum ",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 16,
+          "description": "cifrado que, aunque no tienen sentido para cualquier ",
+          "author": "jose ipsum dolor.",
+          "book_title":"lorem ipsum ",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 17,
+          "description": "en un sistema de escritura que forma una unidad de sentido. También es una composición de caracteres imprimibles ",
+          "author": "bryan iste totam ",
+          "book_title":" lorem ipsum",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 18,
+          "description": "generados por un algoritmo de  quia qui reiciendis iste totam nihil",
+          "author": "pedro iste totam ",
+          "book_title":"lorem ipsum ",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 19,
+          "description": "Un texto es una composición de signos codificados totam nihil",
+          "author": "teo iste totam ",
+          "book_title":"lorem ipsum ",
+          "category":"lorem ipsum",
+          "pages": "lorem ipsum" 
+        },
+        {
+          "id": 20,
+          "description": "quia qui reiciendis iste totam nihil",
+          "author": "sergio iste totam ",
+          "book_title":"lorem ipsum ",
+          "category":"lorem ipsum",
+          "pages":"lorem ipsum" 
+        }
+
+    ]
+}

@@ -2,24 +2,27 @@
     margin: 15px;
 }
 
-#zoom img {
-    -webkit-transition: all .9s ease;
-    width: 100%;
-    border-radius: 20px;
+.category {
+    padding: 15px;
 }
 
-#zoom:hover img {
-    -webkit-transform: scale(1.25);
-    -moz-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    -o-transform: scale(1.25);
-    transform: scale(1.25);
-    border-radius: 20px;
-}
-
-#zoom {
-    width: auto;
-    height: auto;
+.image-box {
+    position: relative;
+    margin: auto;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 50px;
+}
+
+.image-box img {
+    max-width: 100%;
+    transition: all 0.5s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    border-radius: 50px;
+}
+
+.image-box:hover img {
+    transform: scale(.9);
 }

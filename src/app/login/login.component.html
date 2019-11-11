@@ -1,23 +1,22 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form>
+            <form class="form-group">
                 <span class="login100-form-title p-b-26">
                     Iniciar Sesión
                 </span>
-                <div class="loginInput">
-                    <input class="" type="text" placeholder="Usuario" autocomplete="off">
-                </div>
-                <div class="loginInput">
-                    <input class="" type="password" placeholder="Contraseña" autocomplete="off">
-                </div>
-                <button id="btnLogin" type="submit" class="login100-form-btn btn-danger">
+                <br>
+                <input class="form-control" type="text" placeholder="Usuario" autocomplete="off">
+                <input class="form-control" type="password" placeholder="Contraseña" autocomplete="off">
+                <button type="submit" class="btn btn-danger btn-block" style="margin-bottom: 20px;">
                     Entrar
                 </button>
-                <div class="loginInput">
-                    <a style="text-decoration: none;" class="my-2 my-sm-0" href="#">No tienes cuenta?, Regístrate.</a>
-                </div>
+                <a style="text-decoration: none;" [routerLink]="['/registro']">No tienes cuenta?,
+                    Regístrate.</a>
             </form>
+
+
+
         </div>
     </div>
 </div>

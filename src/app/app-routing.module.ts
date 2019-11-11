@@ -6,16 +6,21 @@ import { LoginComponent } from './login/login.component';
 import { ProductoComponent } from './producto/producto.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductosComponent } from './productos/productos.component';
+import { RegistryComponent } from './registry/registry.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'contacto', component: ContactoComponent},
-  {path: 'registro', component: LoginComponent},
+  {path: 'acceder', component: LoginComponent},
   {path: 'products/:id', component: ProductoComponent},
   {path: 'category', component: CategoryComponent},
-  {path: 'products', component: ProductosComponent}
+  {path: 'products', component: ProductosComponent},
+  {path: 'registro', component: RegistryComponent},
+  {path: 'payment', component: PaymentComponent}
+
 ];
 
 @NgModule({

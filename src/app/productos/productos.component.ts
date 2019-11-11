@@ -11,9 +11,9 @@ export class ProductosComponent implements OnInit {
   constructor(private bookRepository: BooksDataRepositoryService) { }
 
   ngOnInit() {
-    }
-    get books() {
-      return this.bookRepository.getBooks();
-    }
-  
+  }
+  get books() {
+    return this.bookRepository.getBooks();
+  }
+
 }

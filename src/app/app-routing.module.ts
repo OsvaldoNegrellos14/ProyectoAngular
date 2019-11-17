@@ -8,6 +8,7 @@ import { CategoryComponent } from './category/category.component';
 import { ProductosComponent } from './productos/productos.component';
 import { RegistryComponent } from './registry/registry.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ResultCategoryComponent } from './result-category/result-category.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'category', component: CategoryComponent},
   {path: 'products', component: ProductosComponent},
   {path: 'registro', component: RegistryComponent},
-  {path: 'payment', component: PaymentComponent}
+  {path: 'payment', component: PaymentComponent},
+  {path: 'result', component: ResultCategoryComponent}
 
 ];
 

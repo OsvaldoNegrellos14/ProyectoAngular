@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registry.component.css']
 })
 export class RegistryComponent implements OnInit {
-
+  data:any ={};
   constructor() { }
 
   ngOnInit() {
+
   }
+onSubmit() {
+    alert(JSON.stringify(this.data));
+  }
+  
 
 }

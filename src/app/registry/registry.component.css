@@ -5,7 +5,7 @@
 
 .container-login100 {
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -14,14 +14,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-    background: #f2f2f2;
+    padding: 70px;
+
 }
 
 .wrap-login100 {
-    width: 600px;
-    height: 575px;
-    background: #fff;
+    width: 800px;
+   
+    background: #0c0c0cbb;
     border-radius: 20px;
     overflow: hidden;
     padding: 77px 55px 33px 55px;
@@ -42,7 +42,7 @@
 .login100-form-title {
     display: block;
     font-size: 30px;
-    color: black;
+    color: lightyellow;
     line-height: 1.2;
     text-align: center;
 }
@@ -64,4 +64,36 @@
     width: 100%;
     height: 40px;
     border-radius: 10px;
+}
+
+ 
+  .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: lightyellow;
+    background-color: #01020323;
+    background-clip: padding-box;
+    border: 1px solid #1d8f43;
+    border-radius: .2rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.placeholder{
+    color: aliceblue;
+
+}
+.form-group {
+    margin-bottom: .4rem;
+}
+.fa{
+    color:#4594e2ec;
+    padding: 5px 7px 7px;
+  
+}
+label {
+ color:white;
 }

@@ -31,7 +31,7 @@ export class ProductoComponent implements OnInit {
 
   private initConfig(): void {
     this.payPalConfig = {
-    currency: 'MXX',
+    currency: 'MXN',
     clientId: 'sb',
     createOrderOnClient: (data) => <ICreateOrderRequest>{
       intent: 'CAPTURE',

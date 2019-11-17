@@ -13,7 +13,9 @@ import { CategoryComponent } from './category/category.component';
 import { ProductosComponent } from './productos/productos.component';
 import { RegistryComponent } from './registry/registry.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { ResultCategoryComponent } from './result-category/result-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +28,15 @@ import { NgxPayPalModule } from 'ngx-paypal';
     CategoryComponent,
     ProductosComponent,
     RegistryComponent,
-    PaymentComponent
+    PaymentComponent,
+    ResultCategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     NgxPayPalModule
   ],
   providers: [],

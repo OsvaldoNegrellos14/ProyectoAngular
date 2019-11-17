@@ -1,52 +1,167 @@
-<div class="container formulario mt-5">
-    <div class="row">
-        <div class="col-lg-8 col-md-12">
-            <br>
-            <h2 class="section-heading">Contáctanos</h2>
-            <h3 class="section-subheading text-muted">Envíanos un mensaje dando tu opinión</h3>
-            <form>
-                <div class="row mt-4">
+<div class="view" style="background-color: #111111;">
+    <br>
 
-                    <div id="input" class="col-md-4 col-sm-12"><input type="text" placeholder="Ingrese su nombre"></div>
-                    <div id="input" class="col-md-4 col-sm-12"><input type="text" placeholder="Ingrese su teléfono">
+    <br>
+    <div class="container formulario mt-6">
+        <div class="view" style="background-color: #010101,">
+            <div class="row">
+                <div class="container">
+                    <br> <br>
+                    <div class="section-title text-center">
+                        <h2>Contáctanos</h2>
+                        <h5 class="lead">Si desea hacernos llegar algún comentario, duda o sugerencia, puede utilizar
+                            <br> el siguiente formulario.</h5>
                     </div>
-                    <div id="input" class="col-md-4 col-sm-12"><input type="text" placeholder="Asunto"></div>
-
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <textarea placeholder="Mensaje"></textarea>
-                        <div class="clearfix"></div>
-                        <div class="col-lg-12 text-center">
-                            <input id="sendMessageButton" class="btn btn-md text-uppercase" type="submit" value="Enviar Mensaje">
+                <div class="col-lg-4 col-md-12">
+
+
+
+
+                    <form name="form" #f="ngForm">
+                        <div class="section-title text-center">
+                            <h3>Contáctenos</h3>
+
                         </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-lg-4 colmd-12" id="DatosContacto">
-            <br>
-            <h2 class="section-heading">Dirección</h2><br>
-            <div class="container">
-                <div class="row">
-                    <div class="col-2">
-                        <i style="font-size: 40px" class="fa fa-map-marker"></i>
-                    </div>
-                    <div class="col-10">
-                        <p> 75700 Tehuacán, Puebla, México.</p>
-                    </div>
+                        <div class="row mt-6">
+                            <div id="input" class="col-md-12 col-sm-12">
+                                <div class="form-group">
+
+
+                                    <input class="form-control" type="text" id="name" name="name"
+                                        [(ngModel)]="data.name" pattern="[a-zA-Z ]*" placeholder="Ingrese su nombre"
+                                        #name="ngModel" required minlength="3">
+                                    <div *ngIf="name.invalid || (name.dirty && name.touch)">
+
+                                        <div *ngIf="name.hasError('minlength')" style="color:pink">
+
+                                            Debe tener al menos 3 caracteres.
+                                        </div>
+                                        <div *ngIf="name.hasError('pattern')" style="color:pink">
+
+                                            Caracter no valido
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="input" class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" id="lastname" name="lastname"
+                                        [(ngModel)]="data.lastname" pattern="[a-zA-Z ]*"
+                                        placeholder="Ingrese sus apellidos" #lastname="ngModel" required minlength="3">
+                                    <div *ngIf="lastname.invalid || (lastname.dirty && lastname.touch)">
+
+                                        <div *ngIf="lastname.hasError('minlength')" style="color:pink">
+
+                                            Debe tener al menos 3 caracteres.
+                                        </div>
+                                        <div *ngIf="lastname.hasError('pattern')" style="color:pink">
+
+                                            Caracter no valido
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="input" class="col-md-12 col-sm-12">
+                                <div class="form-group">
+
+                                    <input class="form-control" type="email" placeholder="Ingrese su correo electronico"
+                                        id="email" name="email" ngModel [email]="true"
+                                        aria-describedby="defaultRegisterFormEmailHelpBlock" [(ngModel)]="data.email"
+                                        #email="ngModel" required minlength="8">
+                                    <div *ngIf="email.invalid || (email.dirty && email.touch)">
+                                        <div *ngIf="email.hasError('minlength')" style="color:pink">
+                                            Debe tener al menos 8 caracteres
+                                        </div>
+                                        <div *ngIf="email.hasError('email')" style="color:pink">
+                                            Email no valido
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="input" class="col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <small id="phone" style="color:white">
+                                        Opcional
+                                    </small>
+                                    <input type="number" id="phone" class="form-control"
+                                        placeholder="Ingrese su numero telefonico"
+                                        aria-describedby="defaultRegisterFormPhoneHelpBlock">
+
+                                </div>
+                            </div>
+
+
+                            <div id="input" class="col-md-12 col-sm-12">
+                                <div class="form-group">
+
+
+                                    <input class="form-control" style="height: 100px; padding: 10px" type="text"
+                                        id="mensaje" name="mensaje" [(ngModel)]="data.mensaje" placeholder="Mensaje"
+                                        #mensaje="ngModel" required minlength="10">
+                                    <div *ngIf="mensaje.invalid || (mensaje.dirty && mensaje.touch)">
+
+                                        <div *ngIf="mensaje.hasError('minlength')" style="color:pink">
+
+                                            Debe tener al menos 10 caracteres.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-block" style="margin-bottom: 20px;"
+                        (click)="onSubmit()" [disabled]="!f.valid">
+                        <i class="	fa fa-send-o fa-1.5x" style="color:white"></i>
+                        Enviar
+                    </button>
+
+                    </form>
 
                 </div>
+                <div class="col-lg-8 colmd-12" id="DatosContacto">
+
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 style="text-align: center; color: aliceblue;">Ubicacion:</h3>
+                    
+
+                            <i class="fa fa-map-marker fa-2x"></i>
+                            <label for="email" style="color:white">75700 Tehuacán, Puebla, México.</label>
+
+
+                        </div>
+
+                    </div>
+
+                
+
+
+
+                    <div class="mapa">
+
+
+
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7895.485196115994!2d103.85995441789784!3d1.2880401763270322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7fb4e58ad9cd826e!2sSingapore+Flyer!5e0!3m2!1sen!2sth!4v1505825620371"></iframe>
+
+                    </div>
+                    <h4 >Librería León
+                        <br>
+                        3 Poniente 318 esquina 5 Sur <br> 72000 <br> Puebla <br> México<br> (+222) 2 42 39 77 <br>
+                        librerialeonpuebla@gmail.com</h4>
+                </div>
             </div>
-
-
-            <h2 class="section-heading">Ubicación</h2><br>
-            <div class="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d946.1071729002789!2d-97.39195657081308!3d18.464231171282076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c5bcd71c978045%3A0x6cfc6dd841de4794!2sCalle+3+Nte.+113%2C+Centro+de+la+Ciudad%2C+75700+Tehuac%C3%A1n%2C+Pue.!5e0!3m2!1ses-419!2smx!4v1564366786608!5m2!1ses-419!2smx"
-                    width="1000" height="650" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-
         </div>
     </div>
 
+    <br>
+
+    <br>
 </div>

@@ -1,0 +1,156 @@
+<div class="view"
+    style="background-image: url('https://storage.needpix.com/rsynced_images/paper-3240768_1280.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <br>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form name="form" #f="ngForm">
+
+
+                    <label for="usuario" class="login100-form-title p-b-26">Registrarse
+                    </label>
+                    <br>
+
+                    <div class="form-row mb-2">
+                        <div class="col">
+
+                            <div class="form-group">
+
+                                <i class="fa fa-user fa-2x"></i>
+
+
+                                <label for="name">Nombre:</label>
+                                <input class="form-control" type="text" id="name" name="name" [(ngModel)]="data.name"
+                                    pattern="[a-zA-Z ]*" placeholder="first name" #name="ngModel" required
+                                    minlength="3">
+                                <div *ngIf="name.invalid || (name.dirty && name.touch)">
+
+                                    <div *ngIf="name.hasError('minlength')" style="color:pink">
+
+                                        Debe tener al menos 3 caracteres.
+                                    </div>
+                                    <div *ngIf="name.hasError('pattern')" style="color:pink">
+
+                                        Caracter no valido
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="form-group">
+                                <i class="fa fa-user fa-2x"></i>
+                                <label for="lastname">Apellido:</label>
+                                <input class="form-control" type="text" id="lastname" name="lastname"
+                                    [(ngModel)]="data.lastname" placeholder="last name" pattern="[a-zA-Z ]*"
+                                    #lastname="ngModel" required minlength="3">
+                                <div *ngIf="lastname.invalid || (lastname.dirty && lastname.touch)">
+
+                                    <div *ngIf="lastname.hasError('minlength')" style="color:pink">
+
+                                        Debe tener al menos 3 caracteres.
+                                    </div>
+                                    <div *ngIf="lastname.hasError('pattern')" style="color:pink">
+
+                                        Caracter invalido
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <i class="fa fa-envelope fa-2x"></i>
+                        <label for="email">E-mail:</label>
+                        <input class="form-control" type="email" placeholder="E-mail" id="email" name="email" ngModel
+                            [email]="true" aria-describedby="defaultRegisterFormEmailHelpBlock" [(ngModel)]="data.email"
+                            #email="ngModel" required minlength="8">
+                        <div *ngIf="email.invalid || (email.dirty && email.touch)">
+
+
+                            <div *ngIf="email.hasError('minlength')" style="color:pink">
+                                Debe tener al menos 8 caracteres
+                            </div>
+                            <div *ngIf="email.hasError('email')" style="color:pink">
+
+                                Email no valido
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fa fa-unlock-alt fa-2x"></i>
+                        <label for="password">contraseña :</label>
+                        <input class="form-control" type="password" placeholder="contraseña" id="password"
+                            name="password" aria-describedby="defaultRegisterFormPasswordHelpBlock"
+                            [(ngModel)]="data.password" #password="ngModel" required minlength="5">
+                        <div *ngIf="password.invalid || (password.dirty && password.touch)">
+
+
+                            <div *ngIf="password.hasError('minlength')" style="color:pink">
+
+                                la contraseña debe tener al menos 5 caracteres
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fa fa-lock fa-2x"></i>
+                        <label for="password">contraseña :</label>
+                        <input class="form-control" type="password" placeholder="contraseña" id="passwordd"
+                            name="passwordd" aria-describedby="defaultRegisterFormPasswordHelpBlock"
+                            [(ngModel)]="data.passwordd" #passwordd="ngModel" required minlength="5">
+                        <div *ngIf="passwordd.invalid || (passwordd.dirty && passwordd.touch)">
+                            <div *ngIf="passwordd.hasError('required')" style="color:pink">
+                                Repetir contraseña
+                            </div>
+
+                            <div *ngIf="passwordd.hasError('minlength')" style="color:pink">
+
+                                La cntraseña no cuincide
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <i class="fa fa-phone fa-2x"></i>
+                    <label for="phone">Telefono:</label>
+
+                    <input type="number" id="phone" class="form-control" placeholder="Phone number"
+                        aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                    <small id="phone" style="color:white">
+                        Opcional
+                    </small>
+
+                    <div class="form-group">
+
+                        <div class="custom-control custom-checkbox">
+
+                            <input type="checkbox" class="custom-control-input" id="isActivate" name="isActivate"
+                                [(ngModel)]="data.isActivate" #isActivate="ngModel">
+                            <label class="custom-control-label" for="isActivate">Registrarse</label>
+                            <div *ngIf="isActivate.invalid || (isActivate.dirty && isActivate.untouch)">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <button type="submit" class="btn btn-danger btn-block" style="margin-bottom: 20px;"
+                        (click)="onSubmit()" [disabled]="!f.valid">
+                        <i class="	fa fa-send-o fa-1.5x" style="color:white"></i>
+                        Entrar
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

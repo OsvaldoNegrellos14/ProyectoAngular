@@ -1,11 +1,22 @@
-.limiter {
+.credit-card-div  span { padding-top:10px; }
+.credit-card-div img { padding-top:30px; }
+.credit-card-div .small-font { font-size:9px; }
+.credit-card-div .pad-adjust { padding-top:10px; }
+
+.sell i {
+    margin: 6px;
+    font-size: 30px;
+}
+
+
+.con {
     width: 100%;
     margin: 0 auto;
 }
 
 .container-login100 {
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -14,14 +25,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 70px;
-
+    padding: 15px;
+    background: #f2f2f2;
 }
 
 .wrap-login100 {
     width: 600px;
-   
-    background: #0c0c0cbb;
+    height: 575px;
+    background: #fff;
     border-radius: 20px;
     overflow: hidden;
     padding: 77px 55px 33px 55px;
@@ -42,7 +53,7 @@
 .login100-form-title {
     display: block;
     font-size: 30px;
-    color: lightyellow;
+    color: black;
     line-height: 1.2;
     text-align: center;
 }
@@ -64,29 +75,4 @@
     width: 100%;
     height: 40px;
     border-radius: 10px;
-}
-
- 
-  .form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: lightyellow;
-    background-color: #01020323;
-    background-clip: padding-box;
-    border: 1px solid #1d8f43;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.placeholder{
-    color: aliceblue;
-
-}
-.fa{
-    color:#4594e2ec;
-    padding: 5px 7px 7px;
 }

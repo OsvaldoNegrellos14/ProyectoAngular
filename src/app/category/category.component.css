@@ -2,12 +2,11 @@
     margin: 15px;
 }
 
-#zoom img {
-    -webkit-transition: all .9s ease;
-    width: 100%;
-    border-radius: 20px;
+.category {
+    padding: 15px;
 }
 
+<<<<<<< HEAD
 #zoom:hover img {
     -webkit-transition: all .9s ease;
     -webkit-transform: scale(1.25);
@@ -16,12 +15,31 @@
     -o-transform: scale(1.25);
     transform: scale(1.25);
     border-radius: 20px;
+=======
+.image-box {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50px;
+>>>>>>> e664df82d8ef43399ad1e3943629ad3aa74b439e
 }
 
-#zoom {
-    width: auto;
+.image-box img {
+    max-width: 100%;
+    transition: all 0.5s;
+    display: block;
+    width: 100%;
     height: auto;
+<<<<<<< HEAD
     overflow: hidden;
     border-radius: 20px;
     -webkit-transition: all .9s ease;
+=======
+    transform: scale(1);
+    border-radius: 50px;
+}
+
+.image-box:hover img {
+    transform: scale(.9);
+>>>>>>> e664df82d8ef43399ad1e3943629ad3aa74b439e
 }

@@ -19,7 +19,7 @@
 }
 
 .wrap-login100 {
-    width: 600px;
+    width: 800px;
    
     background: #0c0c0cbb;
     border-radius: 20px;
@@ -79,14 +79,21 @@
     background-color: #01020323;
     background-clip: padding-box;
     border: 1px solid #1d8f43;
-    border-radius: .25rem;
+    border-radius: .2rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 .placeholder{
     color: aliceblue;
 
 }
+.form-group {
+    margin-bottom: .4rem;
+}
 .fa{
     color:#4594e2ec;
     padding: 5px 7px 7px;
+  
+}
+label {
+ color:white;
 }

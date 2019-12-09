@@ -11,6 +11,11 @@ import { LoginComponent } from './login/login.component';
 import { ProductoComponent } from './producto/producto.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductosComponent } from './productos/productos.component';
+import { RegistryComponent } from './registry/registry.component';
+import { PaymentComponent } from './payment/payment.component';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { ResultCategoryComponent } from './result-category/result-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,12 +26,18 @@ import { ProductosComponent } from './productos/productos.component';
     LoginComponent,
     ProductoComponent,
     CategoryComponent,
-    ProductosComponent
+    ProductosComponent,
+    RegistryComponent,
+    PaymentComponent,
+    ResultCategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NgxPayPalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

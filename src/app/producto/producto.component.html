@@ -1,39 +1,62 @@
 <div id="producto" ngFor="let book">
     <div class="container"><br>
         <div class="row">
-            <div class="img-container col-lg-4 col-md-6 col-sm-12">
+            <div class="img-container col-lg-8 col-md-6 col-sm-12">
                 <img src="http://lorempixel.com/400/400/">
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <h2>
-                    <strong>Acerca del libro:</strong>
-                </h2>
-                <h4>{{'Categoria: ' + book.category}}</h4>
-                <h4>{{book.pages}}</h4>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="pago">
                     <h1>{{book.book_title}}</h1>
-                    <h5>{{'Autor:' + book.author}}</h5><br>
+                    <h5>{{'Autor: ' + book.author}}</h5><br>
                     <h2>$ 2,624.00</h2>
                     <p>Forma de pago:</p>
-                    <div class="sell">
-                        <i class="fa fa-cc-visa" aria-hidden="true"></i>
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <i class="fa fa-paypal" aria-hidden="true"></i>
-                    </div>
-                    <a class="btn btn-success my-2" href="#">Comprar ahora</a>
+                    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
                     <a class="btn btn-success my-2" href="#">Agregar a carrito </a>
-                    <p>Cantidad: </p>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
         <div class="row">
-            <div class="col-6">
-                <h3>Sinopsis</h3>
-                <p>
-                    {{book.description}}
-                </p>
+            <div class="col-lg-6 col-sm-12">
+                <table class="table table-striped">
+                    <thead>
+                        <th scope="col">
+                            Acerca del libro:
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Categoria: {{book.category}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Numero de paginas: {{book.pages}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Editorial:
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Autor:
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Año:
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <h2>Sinopsis</h2>
+                <p>{{book.description}}</p>
             </div>
         </div>
     </div>

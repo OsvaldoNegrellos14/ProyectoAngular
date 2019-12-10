@@ -34,6 +34,6 @@ export class FirebaseService {
   }
 
   public deleteBook(book): Promise <any> {
-    return this.firebaseApi.database.ref('books/' + book.key).remove();
+    return this.firebaseApi.database.ref('books/' + book).remove();
   }
 }

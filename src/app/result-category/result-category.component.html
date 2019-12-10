@@ -1,26 +1,26 @@
 <div class="container mt-5 mb-5">
     <div class="row">
         <div *ngFor="let book of books">
-        <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="book.category == categoria">
-            <div class="card" style="width: 18rem;">
-                <a>
-                    <img src="{{book.imageLink}}" class="card-img-top" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">{{book.title}}</h5>
-                    <p class="card-text text-truncate">{{book.description}}</p>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-6">
-                            <p >{{book.pages}}</p>
-                        </div>
-                        <div class="col-6"><a class="btn btn-danger my-2 my-sm-0" [routerLink]="['../products/',book.key]">Ver
+            <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="book.category == categoria">
+                <div class="card" style="width: 18rem;">
+                    <a [routerLink]="['/products/',book.key]">
+                        <img src="{{book.imageLink}}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{book.title}}</h5>
+                        <p class="card-text text-truncate">{{book.description}}</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <p><b>Paginas: </b>{{book.pages}}</p>
+                            </div>
+                            <div class="col-6"><a class="btn btn-danger my-2 my-sm-0" [routerLink]="['/products/',book.key]">Ver
                                 más</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </div>

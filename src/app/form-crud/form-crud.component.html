@@ -4,8 +4,8 @@
             <form name="form" #f="ngForm">
                 <div class="form-group">
                     <label for="titulo" class="control-label">Nombre del libro:</label>
-                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="data.title" #titulo="ngModel" required minlength="3" pattern="[A-Za-z0-9 ]{1,30}">
-                    <div *ngIf="titulo.invalid || (titulo.dirty && titulo.touched)" class="">
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="data.title" #titulo="ngModel" required minlength="3" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ ]{1,30}">
+                    <div *ngIf="(titulo.dirty && titulo.touched)" class="">
                         <div *ngIf="titulo.hasError('required')" class="alert alert-danger">
                             Titulo requerido
                         </div>
@@ -19,8 +19,8 @@
                     <div class="row">
                         <div class="col-6">
                             <label for="autor" class="control-label">Nombre del autor:</label>
-                            <input type="text" class="form-control" id="autor" name="autor" [(ngModel)]="data.author" #autor="ngModel" required minlength="3" pattern="[A-Za-z ]{1,30}">
-                            <div *ngIf="autor.invalid || (autor.dirty && autor.touched)" class="">
+                            <input type="text" class="form-control" id="autor" name="autor" [(ngModel)]="data.author" #autor="ngModel" required minlength="3" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ ]{1,30}">
+                            <div *ngIf="(autor.dirty && autor.touched)" class="">
                                 <div *ngIf="autor.hasError('required')" class="alert alert-danger">
                                     Autor requerido
                                 </div>
@@ -34,8 +34,8 @@
                         </div>
                         <div class="col-6">
                             <label for="categoria" class="control-label">Categoria:</label>
-                            <input type="text" class="form-control" id="categoria" name="categoria" [(ngModel)]="data.category" #categoria="ngModel" required minlength="3" pattern="[A-Za-z ]{1,30}">
-                            <div *ngIf="categoria.invalid || (categoria.dirty && categoria.touched)" class="">
+                            <input type="text" class="form-control" id="categoria" name="categoria" [(ngModel)]="data.category" #categoria="ngModel" required minlength="3" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ ]{1,30}">
+                            <div *ngIf="(categoria.dirty && categoria.touched)" class="">
                                 <div *ngIf="categoria.hasError('required')" class="alert alert-danger">
                                     Categoria requerido
                                 </div>
@@ -54,8 +54,8 @@
                     <div class="row">
                         <div class="col-6">
                             <label for="pais" class="control-label">Pais:</label>
-                            <input type="text" class="form-control" id="pais" name="pais" [(ngModel)]="data.country" #pais="ngModel" required minlength="3" pattern="[A-Za-z ]{1,30}">
-                            <div *ngIf="pais.invalid || (pais.dirty && pais.touched)" class="">
+                            <input type="text" class="form-control" id="pais" name="pais" [(ngModel)]="data.country" #pais="ngModel" required minlength="3" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ ]{1,30}">
+                            <div *ngIf="(pais.dirty && pais.touched)" class="">
                                 <div *ngIf="pais.hasError('required')" class="alert alert-danger">
                                     Pais requerido
                                 </div>
@@ -69,8 +69,8 @@
                         </div>
                         <div class="col-6">
                             <label for="idioma" class="control-label">Idioma:</label>
-                            <input type="text" class="form-control" id="idioma" name="idioma" [(ngModel)]="data.language" #idioma="ngModel" required minlength="3" pattern="[A-Za-z ]{1,30}">
-                            <div *ngIf="idioma.invalid || (idioma.dirty && idioma.touched)" class="">
+                            <input type="text" class="form-control" id="idioma" name="idioma" [(ngModel)]="data.language" #idioma="ngModel" required minlength="3" pattern="[A-Za-z-ZñÑáéíóúÁÉÍÓÚ ]{1,30}">
+                            <div *ngIf="(idioma.dirty && idioma.touched)" class="">
                                 <div *ngIf="idioma.hasError('required')" class="alert alert-danger">
                                     Idioma requerido
                                 </div>
@@ -89,8 +89,8 @@
                     <div class="row">
                         <div class="col-4">
                             <label for="paginas" class="control-label">Num. Paginas:</label>
-                            <input type="text" class="form-control" id="paginas" name="paginas" [(ngModel)]="data.pages" #paginas="ngModel" required pattern="[0-9]{1,30}">
-                            <div *ngIf="paginas.invalid || (paginas.dirty && paginas.touched)" class="">
+                            <input type="text" class="form-control" id="paginas" name="paginas" [(ngModel)]="data.pages" #paginas="ngModel" required pattern="[0-9 -]{1,30}">
+                            <div *ngIf="(paginas.dirty && paginas.touched)" class="">
                                 <div *ngIf="paginas.hasError('required')" class="alert alert-danger">
                                     Paginas requerido
                                 </div>
@@ -101,8 +101,8 @@
                         </div>
                         <div class="col-4">
                             <label for="precio" class="control-label">Precio:</label>
-                            <input type="text" class="form-control" id="precio" name="precio" [(ngModel)]="data.price" #precio="ngModel" required pattern="[0-9]{1,30}">
-                            <div *ngIf="precio.invalid || (precio.dirty && precio.touched)" class="">
+                            <input type="text" class="form-control" id="precio" name="precio" [(ngModel)]="data.price" #precio="ngModel" required pattern="[0-9 -]{1,30}">
+                            <div *ngIf="(precio.dirty && precio.touched)" class="">
                                 <div *ngIf="precio.hasError('required')" class="alert alert-danger">
                                     Precio requerido
                                 </div>
@@ -113,8 +113,8 @@
                         </div>
                         <div class="col-4">
                             <label for="anio" class="control-label">Año:</label>
-                            <input type="text" class="form-control" id="anio" name="anio" [(ngModel)]="data.year" #anio="ngModel" required pattern="[0-9]{1,30}">
-                            <div *ngIf="anio.invalid || (anio.dirty && anio.touched)" class="">
+                            <input type="text" class="form-control" id="anio" name="anio" [(ngModel)]="data.year" #anio="ngModel" required pattern="[0-9 -]{1,30}">
+                            <div *ngIf="(anio.dirty && anio.touched)" class="">
                                 <div *ngIf="anio.hasError('required')" class="alert alert-danger">
                                     Año requerido
                                 </div>
@@ -129,21 +129,19 @@
                 <div class="form-group">
                     <label for="descripcion" class="control-label">Descripción:</label>
                     <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="5" [(ngModel)]="data.description" #descripcion="ngModel" required></textarea>
-                    <div *ngIf="descripcion.invalid || (descripcion.dirty && descripcion.touched)" class="">
+                    <div *ngIf="(descripcion.dirty && descripcion.touched)" class="">
                         <div *ngIf="descripcion.hasError('required')" class="alert alert-danger">
                             Descripcion requerido
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-2 text-center" >
+                        <div class="col-2 text-center">
                             <button id="send" type="submit" class="btn btn-primary" (click)="saveBook()" [disabled]="!f.valid">Agregar</button>
                         </div>
-                        <div class="col-2 text-center" >
-                            <button id="update" type="submit" class="btn btn-success" (click)="updateBook()" [disabled]="!f.valid">Actualizar</button>
-                        </div>
+                        <div class="col-8"></div>
                         <!-- <div class="col-8 text-left">
                             <label for="imagen" class="control-label">Imagen:</label><br>
                             <input type="file" name="imagen" accept="image/*" id="imagen" [(ngModel)]="data.imagen" #imagen="ngModel" required>
@@ -153,13 +151,17 @@
                                 </div>
                             </div>
                         </div> -->
+                        <div class="col-2 text-center">
+                            <button id="update" type="submit" class="btn btn-success" (click)="updateBook()" [disabled]="!f.valid">Actualizar</button>
+                        </div>
+
                     </div>
 
                 </div>
 
             </form>
         </div>
-        <div class="col-lg-7 col-md-12" style="overflow: scroll; height: 800px;">
+        <div class="col-lg-7 col-md-12" style="overflow: scroll; height: 600px;">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -183,7 +185,7 @@
                         <td class="align-middle"><img src="{{book.imageLink}}" style="width: 50px;"></td>
                         <td class="align-middle"><button class="btn btn-success" (click)="fillData(book)"><i class="fa fa-pencil-square-o"
                                     aria-hidden="true"></i></button></td>
-                        <td class="align-middle" ><button class="btn btn-danger" (click)="removeBook(book.key)"><i class="fa fa-trash"
+                        <td class="align-middle"><button class="btn btn-danger" (click)="removeBook(book.key)"><i class="fa fa-trash"
                                     aria-hidden="true" ></i></button></td>
                     </tr>
                 </tbody>

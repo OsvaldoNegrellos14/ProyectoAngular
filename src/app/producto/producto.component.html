@@ -1,14 +1,14 @@
-<div id="producto" ngFor="let book">
+<div id="producto" ngFor="let books">
     <div class="container"><br>
         <div class="row">
             <div class="img-container col-lg-8 col-md-6 col-sm-12">
-                <img src="http://lorempixel.com/400/400/">
+                <img src="{{books[5]}}">
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="pago">
-                    <h1>{{book.book_title}}</h1>
-                    <h5>{{'Autor: ' + book.author}}</h5><br>
-                    <h2>$ 2,624.00</h2>
+                    <h1>{{books[9]}}</h1>
+                    <h5>{{'Autor: ' + books[0]}}</h5><br>
+                    <h2>$ {{books[8]}}</h2>
                     <p>Forma de pago:</p>
                     <ngx-paypal [config]="payPalConfig"></ngx-paypal>
                     <a class="btn btn-success my-2" href="#">Agregar a carrito </a>
@@ -28,27 +28,22 @@
                     <tbody>
                         <tr>
                             <td>
-                                Categoria: {{book.category}}
+                                Categoria: {{books[1]}}
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Numero de paginas: {{book.pages}}
+                                Numero de paginas: {{books[7]}}
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Editorial:
+                                Idioma: {{books[6]}}
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Autor:
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Año:
+                                Año: {{books[10]}}
                             </td>
                         </tr>
                     </tbody>
@@ -56,7 +51,7 @@
             </div>
             <div class="col-lg-6 col-sm-12">
                 <h2>Sinopsis</h2>
-                <p>{{book.description}}</p>
+                <p>{{books[3]}}</p>
             </div>
         </div>
     </div>

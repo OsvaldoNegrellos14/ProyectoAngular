@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from "@angular/router";
-import { BooksDataRepositoryService } from '../books-data-repository.service';
 import { Books } from '../books';
 
 import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
+import { FirebaseService } from '../services/firebase.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-producto',
@@ -12,22 +13,26 @@ import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 })
 export class ProductoComponent implements OnInit {
   public payPalConfig?: IPayPalConfig;
-  showSuccess:boolean;
-  book: Books;
+  showSuccess: boolean;
+  books: Books[] = [];
   id: string;
+  objectService: Subscription;
   constructor(
     private route: ActivatedRoute,
-    private bookRepository: BooksDataRepositoryService) { }
+    private firebaseAPI: FirebaseService) {
+      this.id = this.route.snapshot.paramMap.get('id');
+      this.firebaseAPI.readBookId(this.id).
+      subscribe( res => {
+        console.log(res);
+        this.books = res;
+      });
+    }
 
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.book = this.bookRepository.getBook(this.id);
+    
     this.initConfig();
   }
 
-  get books() {
-    return this.bookRepository.getBooks();
-  }
 
   private initConfig(): void {
     this.payPalConfig = {

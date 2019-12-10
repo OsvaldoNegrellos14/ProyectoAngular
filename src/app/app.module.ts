@@ -16,6 +16,19 @@ import { PaymentComponent } from './payment/payment.component';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { ResultCategoryComponent } from './result-category/result-category.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+var firebaseConfig = {
+  apiKey: "AIzaSyDo49YFRdGUuV28YQS4y3vgRUhCKdz9WPo",
+  authDomain: "proyectoangular-8322a.firebaseapp.com",
+  databaseURL: "https://proyectoangular-8322a.firebaseio.com",
+  projectId: "proyectoangular-8322a",
+  storageBucket: "proyectoangular-8322a.appspot.com",
+  messagingSenderId: "16234422408",
+  appId: "1:16234422408:web:4acc5f8e0d6c139333ff3d"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +50,9 @@ import { ResultCategoryComponent } from './result-category/result-category.compo
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    NgxPayPalModule
+    NgxPayPalModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

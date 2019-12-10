@@ -6,22 +6,11 @@
     padding: 15px;
 }
 
-<<<<<<< HEAD
-#zoom:hover img {
-    -webkit-transition: all .9s ease;
-    -webkit-transform: scale(1.25);
-    -moz-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    -o-transform: scale(1.25);
-    transform: scale(1.25);
-    border-radius: 20px;
-=======
 .image-box {
     position: relative;
     margin: auto;
     overflow: hidden;
     border-radius: 50px;
->>>>>>> e664df82d8ef43399ad1e3943629ad3aa74b439e
 }
 
 .image-box img {
@@ -30,16 +19,10 @@
     display: block;
     width: 100%;
     height: auto;
-<<<<<<< HEAD
-    overflow: hidden;
-    border-radius: 20px;
-    -webkit-transition: all .9s ease;
-=======
     transform: scale(1);
     border-radius: 50px;
 }
 
 .image-box:hover img {
     transform: scale(.9);
->>>>>>> e664df82d8ef43399ad1e3943629ad3aa74b439e
 }

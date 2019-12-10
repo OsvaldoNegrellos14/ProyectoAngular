@@ -1,0 +1,194 @@
+<div class="container-fluid" style="margin-top: 25px;">
+    <div class="row">
+        <div class="col-lg-5 col-md-12">
+            <form name="form" #f="ngForm">
+                <div class="form-group">
+                    <label for="titulo" class="control-label">Nombre del libro:</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="data.titulo" #titulo="ngModel" required minlength="3" pattern="[A-Za-z0-9 ]{1,30}">
+                    <div *ngIf="titulo.invalid || (titulo.dirty && titulo.touched)" class="">
+                        <div *ngIf="titulo.hasError('required')" class="alert alert-danger">
+                            Titulo requerido
+                        </div>
+                        <div *ngIf="titulo.hasError('minlength')" class="alert alert-warning">
+                            Titulo debe de tener al menos 3 caracteres
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="autor" class="control-label">Nombre del autor:</label>
+                            <input type="text" class="form-control" id="autor" name="autor" [(ngModel)]="data.autor" #autor="ngModel" required minlength="3" pattern="[A-Za-z ]{1,30}">
+                            <div *ngIf="autor.invalid || (autor.dirty && autor.touched)" class="">
+                                <div *ngIf="autor.hasError('required')" class="alert alert-danger">
+                                    Autor requerido
+                                </div>
+                                <div *ngIf="autor.hasError('minlength')" class="alert alert-warning">
+                                    Autor debe de tener al menos 3 caracteres
+                                </div>
+                                <div *ngIf="autor.hasError('pattern')" class="alert alert-warning">
+                                    Autor solo acepta letras
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label for="categoria" class="control-label">Categoria:</label>
+                            <input type="text" class="form-control" id="categoria" name="categoria" [(ngModel)]="data.categoria" #categoria="ngModel" required minlength="3" pattern="[A-Za-z ]{1,30}">
+                            <div *ngIf="categoria.invalid || (categoria.dirty && categoria.touched)" class="">
+                                <div *ngIf="categoria.hasError('required')" class="alert alert-danger">
+                                    Categoria requerido
+                                </div>
+                                <div *ngIf="categoria.hasError('minlength')" class="alert alert-warning">
+                                    Categoria debe de tener al menos 3 caracteres
+                                </div>
+                                <div *ngIf="categoria.hasError('pattern')" class="alert alert-warning">
+                                    Categoria solo acepta letras
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="pais" class="control-label">Pais:</label>
+                            <input type="text" class="form-control" id="pais" name="pais" [(ngModel)]="data.pais" #pais="ngModel" required minlength="3" pattern="[A-Za-z ]{1,30}">
+                            <div *ngIf="pais.invalid || (pais.dirty && pais.touched)" class="">
+                                <div *ngIf="pais.hasError('required')" class="alert alert-danger">
+                                    Pais requerido
+                                </div>
+                                <div *ngIf="pais.hasError('minlength')" class="alert alert-warning">
+                                    Pais debe de tener al menos 3 caracteres
+                                </div>
+                                <div *ngIf="pais.hasError('pattern')" class="alert alert-warning">
+                                    Pais solo acepta letras
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label for="idioma" class="control-label">Idioma:</label>
+                            <input type="text" class="form-control" id="idioma" name="idioma" [(ngModel)]="data.idioma" #idioma="ngModel" required minlength="3" pattern="[A-Za-z ]{1,30}">
+                            <div *ngIf="idioma.invalid || (idioma.dirty && idioma.touched)" class="">
+                                <div *ngIf="idioma.hasError('required')" class="alert alert-danger">
+                                    Idioma requerido
+                                </div>
+                                <div *ngIf="idioma.hasError('minlength')" class="alert alert-warning">
+                                    Idioma debe de tener al menos 3 caracteres
+                                </div>
+                                <div *ngIf="idioma.hasError('pattern')" class="alert alert-warning">
+                                    Idioma solo acepta letras
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="paginas" class="control-label">Num. Paginas:</label>
+                            <input type="text" class="form-control" id="paginas" name="paginas" [(ngModel)]="data.paginas" #paginas="ngModel" required pattern="[0-9]{1,30}">
+                            <div *ngIf="paginas.invalid || (paginas.dirty && paginas.touched)" class="">
+                                <div *ngIf="paginas.hasError('required')" class="alert alert-danger">
+                                    Paginas requerido
+                                </div>
+                                <div *ngIf="paginas.hasError('pattern')" class="alert alert-warning">
+                                    Paginas solo acepta numeros
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="precio" class="control-label">Precio:</label>
+                            <input type="text" class="form-control" id="precio" name="precio" [(ngModel)]="data.precio" #precio="ngModel" required pattern="[0-9]{1,30}">
+                            <div *ngIf="precio.invalid || (precio.dirty && precio.touched)" class="">
+                                <div *ngIf="precio.hasError('required')" class="alert alert-danger">
+                                    Precio requerido
+                                </div>
+                                <div *ngIf="precio.hasError('pattern')" class="alert alert-warning">
+                                    Precio solo acepta numeros
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <label for="anio" class="control-label">Año:</label>
+                            <input type="text" class="form-control" id="anio" name="anio" [(ngModel)]="data.anio" #anio="ngModel" required pattern="[0-9]{1,30}">
+                            <div *ngIf="anio.invalid || (anio.dirty && anio.touched)" class="">
+                                <div *ngIf="anio.hasError('required')" class="alert alert-danger">
+                                    Año requerido
+                                </div>
+                                <div *ngIf="anio.hasError('pattern')" class="alert alert-warning">
+                                    Año solo acepta numeros
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion" class="control-label">Descripción:</label>
+                    <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="5" [(ngModel)]="data.descripcion" #descripcion="ngModel" required></textarea>
+                    <div *ngIf="descripcion.invalid || (descripcion.dirty && descripcion.touched)" class="">
+                        <div *ngIf="descripcion.hasError('required')" class="alert alert-danger">
+                            Descripcion requerido
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-2 text-center">
+                            <button type="submit" class="btn btn-primary">Agregar</button>
+                        </div>
+                        <div class="col-2 text-center">
+                            <button type="submit" class="btn btn-success">Actualizar</button>
+                        </div>
+                        <div class="col-8 text-left">
+                            <label for="imagen" class="control-label">Imagen:</label><br>
+                            <input type="file" name="imagen" accept="image/*" id="imagen" [(ngModel)]="data.imagen" #imagen="ngModel" required>
+                            <div *ngIf="imagen.invalid || (imagen.dirty && imagen.touched)" class="">
+                                <div *ngIf="imagen.hasError('required')" class="alert alert-danger">
+                                    Imagen requerido
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+        <div class="col-lg-7 col-md-12" style="overflow: scroll; height: 800px;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="align-middle">1</th>
+                        <td class="align-middle">Moby Dick</td>
+                        <td class="align-middle">Willian</td>
+                        <td class="align-middle">Novela</td>
+                        <td class="align-middle">$450</td>
+                        <td class="align-middle"><img src="./../../assets/images/a-Dolls-house.jpg" style="width: 50px;"></td>
+                        <td class="align-middle"><button class="btn btn-success"><i class="fa fa-pencil-square-o"
+                                    aria-hidden="true"></i></button></td>
+                        <td class="align-middle"><button class="btn btn-danger"><i class="fa fa-trash"
+                                    aria-hidden="true"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

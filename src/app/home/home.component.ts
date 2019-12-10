@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BooksDataRepositoryService } from '../books-data-repository.service';
+import { FirebaseService } from '../services/firebase.service';
+import { Books } from '../books';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,17 @@ import { BooksDataRepositoryService } from '../books-data-repository.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private bookRepository: BooksDataRepositoryService) { }
-
-  ngOnInit() {
+  books: Books[] = [];
+  filter: any;
+  constructor(private fireService: FirebaseService) { 
+    this.fireService.readBook().
+    subscribe(res => {
+      this.books = res;
+      this.filter = this.books.slice(-9);
+      console.log(this.filter);
+  });
   }
-  get books() {
-    return this.bookRepository.getBooks();
-  }
+ ngOnInit() {
+
+ }
 }

@@ -18,6 +18,7 @@ import { NgxPayPalModule } from 'ngx-paypal';
 import { ResultCategoryComponent } from './result-category/result-category.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { FormCrudComponent } from './form-crud/form-crud.component';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDo49YFRdGUuV28YQS4y3vgRUhCKdz9WPo",
@@ -42,7 +43,8 @@ var firebaseConfig = {
     ProductosComponent,
     RegistryComponent,
     PaymentComponent,
-    ResultCategoryComponent
+    ResultCategoryComponent,
+    FormCrudComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { RegistryComponent } from './registry/registry.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ResultCategoryComponent } from './result-category/result-category.component';
+import { FormCrudComponent } from './form-crud/form-crud.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'products', component: ProductosComponent},
   {path: 'registro', component: RegistryComponent},
   {path: 'payment', component: PaymentComponent},
-  {path: 'result', component: ResultCategoryComponent}
+  {path: 'result/:id', component: ResultCategoryComponent},
+  {path: 'admin', component: FormCrudComponent}
 
 ];
 

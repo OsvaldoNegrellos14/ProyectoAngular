@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { FirebaseService } from '../services/firebase.service';
+import { Books } from '../books';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-result-category',
@@ -7,7 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultCategoryComponent implements OnInit {
 
-  constructor() { }
+  books: Books[] = [];
+  categoria: string;
+  objectService: Subscription;
+  constructor(
+    private route: ActivatedRoute,
+    private firebaseAPI: FirebaseService) {
+      this.categoria = this.route.snapshot.paramMap.get('id');
+      this.firebaseAPI.readBook().
+      subscribe( res => {
+        console.log(res);
+        this.books = res;
+      });
+    }
 
   ngOnInit() {
   }
